@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>Python PreWork - Coding Temple</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="./">Python Prework</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="../week1/">Week 1<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../week2/">Week 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../week3/">Week 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <main class="container p-3">
+        <div class="row">
+            <div class="col">
+            <h1>Setup Anaconda and Python 101</h1>
+                <h2>Anaconda Installation</h2>
+                <ol>
+                    <li><a href="https://www.anaconda.com/download/">Installing Anaconda (which includes Jupyter)</a></li>
+                    <div>Please install the laest version of Anaconda using Python 3 (NOT python 2.7)</div>
+                    <div>Please check both of these options during Installations</div>
+                    <img src="./anacondainstall.png" alt="anacondainstall" height="360" width="500">
+                    <li>Open Jupyter Lab via the Terminal or Command Line</li>
+                    <img src="./lab1.png" alt="anacondainstall" height="260" width="500">
+                    <li>Create a notebook and do "Hello Word!"</li>
+                    <img src="./lab2.png" alt="anacondainstall" height="260" width="500">
+                    <li><a href="https://docs.anaconda.com/anaconda/user-guide/getting-started">Learn More about Anaconda</a></li>
+                </ol>
+
+                <h2>Using Python as a Calculator</h2>
+                <p>
+                    The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. 
+                    Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. 
+                    For example:
+                </p>
+                <code><pre>
+    >>> 2 + 2
+    4
+    >>> 50 - 5*6
+    20
+    >>> (50 - 5*6) / 4
+    5.0
+    >>> 8 / 5  # division always returns a floating point number
+    1.6
+                </pre></code>
+
+                <p>
+                    The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. 
+                    Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. 
+                    For example:
+                </p>
+                <code><pre>                    
+    >>> 2 + 2
+    4
+    >>> 50 - 5*6
+    20
+    >>> (50 - 5*6) / 4
+    5.0
+    >>> 8 / 5  # division always returns a floating point number
+    1.6
+                </pre></code>
+
+                <p>
+                    The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. 
+                    Division (/) always returns a float. 
+                    To do floor division and get an integer result (discarding any fractional result) you can use the // operator; 
+                    to calculate the remainder you can use %:
+                </p>
+                <code><pre>
+    >>> 17 / 3  # classic division returns a float
+    5.666666666666667
+    >>>
+    >>> 17 // 3  # floor division discards the fractional part
+    5
+    >>> 17 % 3  # the % operator returns the remainder of the division
+    2
+    >>> 5 * 3 + 2  # result * divisor + remainder
+    17
+
+    With Python, it is possible to use the ** operator to calculate powers
+    >>>
+    >>> 5 ** 2  # 5 squared
+    25
+    >>> 2 ** 7  # 2 to the power of 7
+    128
+                </pre></code>
+
+                <p>
+                    The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt:
+                    There is full support for floating point; operators with mixed type operands convert the integer operand to floating point:
+                </p>
+                <code><pre>
+    >>> width = 20
+    >>> height = 5 * 9
+    >>> width * height
+    900
+    >>> 4 * 3.75 - 1
+    14.0
+                </pre></code>
+
+                <h2>Python String</h2>
+                <p>
+                    Besides numbers, Python can also manipulate strings, which can be expressed in several ways. 
+                    They can be enclosed in single quotes ('...') or double quotes ("...") with the same result [2]. \ can be used to escape quotes:
+                </p>
+                <code><pre>
+    >>> 'spam eggs'  # single quotes
+    'spam eggs'
+    >>> 'doesn\'t'  # use \' to escape the single quote...
+    "doesn't"
+    >>> "doesn't"  # ...or use double quotes instead
+    "doesn't"
+    >>> '"Yes," he said.'
+    '"Yes," he said.'
+    >>> "\"Yes,\" he said."
+    '"Yes," he said.'
+    >>> '"Isn\'t," she said.'
+    '"Isn\'t," she said.'
+                </pre></code>
+
+                <p>
+                    If you want to concatenate variables or a variable and a literal, use +:
+                </p>
+                <code><pre>
+    >>> prefix = 'Py'
+    >>> prefix + 'thon123'
+    'Python123'
+                </pre></code>
+
+                <p>
+                    Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one: 
+                </p>
+                <code><pre>
+    >>> word = 'Python'
+    >>> word[0]  # character in position 0
+    'P'
+    >>> word[5]  # character in position 5
+    'n'
+                </pre></code>
+
+                <p>
+                    Indices may also be negative numbers, to start counting from the right:
+                </p>
+                <code><pre>
+    >>> word[-1]  # last character
+    'n'
+    >>> word[-2]  # second-last character
+    'o'
+    >>> word[-6]
+    'P'
+                </pre></code>
+
+                <p>
+                    In addition to indexing, slicing is also supported. While indexing is used to obtain individual characters, slicing allows you to obtain substring:
+                </p>
+                <code><pre>
+    >>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
+    'Py'
+    >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
+    'tho'
+                </pre></code>
+
+                <p>
+                Note how the start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is always equal to s:
+                </p>
+                <code><pre>
+    >>> word[:2] + word[2:]
+    'Python'
+    >>> word[:4] + word[4:]
+    'Python'
+                </pre></code>
+
+                <p>
+                Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults to the size of the string being sliced.
+                </p>
+                <code><pre>
+    >>> word[:2]   # character from the beginning to position 2 (excluded)
+    'Py'
+    >>> word[4:]   # characters from position 4 (included) to the end
+    'on'
+    >>> word[-2:]  # characters from the second-last (included) to the end
+    'on'
+                </pre></code>
+                <a class="btn btn-primary btn-block" href="../week2/">Continue to Week 2</a>
+            </div>
+        </div>
+    </main>
+          
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>Python PreWork - Coding Temple</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="./">Python Prework</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../week1/">Week 1</a></li>
+                <li class="nav-item active"><a class="nav-link" href="../week2/">Week 2<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="../week3/">Week 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container p-3">
+        <div class="row">
+            <div class="col">
+            <h1>Python 201</h1>
+                <h2>Python Control Flow</h2>
+                <h3>Indentation</h3>
+                Python Using Indentation to do Control Flow.<br>
+                It is important to keep a good understanding of how indentation works in Python to maintain the structure and order of your code.<br>
+                <p>In this universe, any thing can be done by these three ways.</p>
+                <ol>
+                    <li>Step by Step: line by line</li>
+                    <li>Branch: if… elif… else..</li>
+                    <li>Looping: for, while</li>
+                </ol>
+
+                <h3>Branch: if… elif… else..</h3>
+                if Statements in Python allows us to tell the computer to perform alternative actions based on a certain set of results.<br>
+                Verbally, we can imagine we are telling the computer:<br>
+                "Hey if this case happens, perform some action"<br>
+                We can then expand the idea further with elif and else statements, which allow us to tell the computer:<br>
+                "Hey if this case happens, perform some action. Else if another case happens, perform some other action. Else-- none of the above cases happened, perform this action"<br>
+                Let's go ahead and look at the syntax format for if statements to get a better idea of this:<br>
+                <code><pre>
+    if case1:
+        perform action1
+    elif case2:
+        perform action2
+    else:
+        perform action 3
+                </pre></code>
+
+                <p>
+                Let's see a quick example of this:
+                </p>
+                <code><pre>
+    >>> x = int(input("Please enter an integer: "))
+    Please enter an integer: 42
+    >>> if x < 0:
+    ...     x = 0
+    ...     print('Negative changed to zero')
+    ... elif x == 0:
+    ...     print('Zero')
+    ... elif x == 1:
+    ...     print('Single')
+    ... else:
+    ...     print('More')
+    ...
+    More
+                </pre></code>
+
+                <h3>Looping: for, while</h3>
+                <p>
+                The for statement in Python used to do repeating. <br>
+                Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence.<br>
+                </p>
+                <code><pre>
+    >>> # Measure some strings:
+    ... words = ['cat', 'window', 'defenestrate']
+    >>> for w in words:
+    ...     print(w, len(w))
+    ...
+    cat 3
+    window 6
+    defenestrate 12
+                </pre></code>
+
+                <h2>Python Function</h2>
+
+                Functions will be one of our main building blocks when we construct larger and larger amounts of code to solve problems.<br>
+                
+                <h3>What is a function?</h3>
+                Formally, a function is a useful device that groups together a set of statements so they can be run more than once. 
+                They can also let us specify parameters that can serve as inputs to the functions.<br>
+                
+                On a more fundamental level, functions allow us to not have to repeatedly write the same code again and again. 
+                For example, the function len() to get the length of a string. 
+                Since checking the length of a sequence is a common task you would want to write a function that can do this repeatedly at command.<br>
+
+                Functions will be one of most basic levels of reusing code in Python, 
+                and it will also allow us to start thinking of program design (we will dive much deeper into the ideas of design when we learn about Object Oriented Programming).<br>
+                
+                <h3>Function Syntax - def Statement</h3>
+                <ol>
+                    <li>Indentation and def Statement used to build out a function in Python.</li>
+                    <li>Use a return statement, a function return a result that can then be stored as a variable, or used in whatever manner a user wants.</li>
+                    <li>There are two kinds of function: built-in function, which are already created by python, and User defined function (UDF).</li>
+                </ol>
+                <code><pre>
+    >>> def add_num(num1,num2):
+    ...     return num1+num2
+    >>> add_num(4,5)
+    9
+                </pre></code>
+
+
+                <p>
+
+                </p>
+                <code><pre>
+    >>> def is_prime(num):
+            '''
+            Naive method of checking for primes. 
+            '''
+            for n in range(2,num):
+                if num % n == 0:
+                    print ('not prime')
+                    break
+            else: # If never mod zero, then prime
+                print ('prime')
+    >>> is_prime(25)
+    not prime
+                </pre></code>
+                <a class="btn btn-primary btn-block" href="../week3/">Continue to Week 3</a>
+            </div>
+        </div>
+    </main>
+          
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
