@@ -13,7 +13,7 @@ background.initializr = function (){
   if($("#"+$this.id).lenght > 0){
     $("#"+$this.id).remove();
   }
-  $this.object = $("<div style='z-index:-1;margin:0;padding:0; width:100%; overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'").appendTo("body");
+  $this.object = $("<div style='z-index:-1;margin:0;padding:0; background: linear-gradient(white, white, white,  #007bff); width:100%; overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'").appendTo("body");
   
   $this.ww = $(window).width()
   $this.wh = $(window).height()
