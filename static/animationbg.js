@@ -4,7 +4,7 @@ background.initializr = function (){
   var $this = this;
   //option
   $this.id = "background_css3";
-  $this.style = {bubbles_color:"#fff",stroke_width:0, stroke_color :"black"};
+  $this.style = {bubbles_color:"#daeaff",stroke_width:0, stroke_color :"black"};//#daeaff//#ffdae9
   $this.bubbles_number = 30;
   $this.speed = [1500,8000]; //milliseconds
   $this.max_bubbles_height = $this.height;
@@ -13,7 +13,7 @@ background.initializr = function (){
   if($("#"+$this.id).lenght > 0){
     $("#"+$this.id).remove();
   }
-  $this.object = $("<div style='z-index:-1;margin:0;padding:0; background: linear-gradient(white, white, white,  #007bff); width:100%; overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'").appendTo("body");
+  $this.object = $("<div style='z-index:-1;margin:0;padding:0; width:100%; overflow:hidden;position:absolute;bottom:0' id='"+$this.id+"'> </div>'").appendTo("body");
   
   $this.ww = $(window).width()
   $this.wh = $(window).height()
