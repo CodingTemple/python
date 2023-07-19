@@ -1,66 +1,688 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/main.css">
-    <title>Python PreWork</title>
-  </head>
+<html>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="./">Data Analytics PreWork</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<head>
+    <title>Coding Temple's Data Analytics Program PreWork</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="./week1/">Python101</a></li>
-            <li class="nav-item"><a class="nav-link" href="./week2/">Python102</a></li>
-            <li class="nav-item"><a class="nav-link" href="../supplemental/">Additional Resources</a></li>
+<body>
+    <h1>Coding Temple's Data Analytics Program PreWork</h1>
+    
+    <h2>Getting Started</h2>
+    
+    <p>Before you begin the exercises, please ensure the following:</p>
+    <ul>
+        <li>You have created an account with <a href="https://www.kaggle.com/">Kaggle</a>,
+            <a href="https://public.tableau.com/app/discover">Tableau</a>,
+            <a href="https://github.com/">GitHub</a>
+        </li>
+        <li>You have downloaded <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL
+                Installer</a>,
+            <a href="https://www.pgadmin.org/download/">pgadmin4</a>,
+            <a href="https://cran.r-project.org/mirrors.html">R</a>,
+            <a href="https://posit.co/download/rstudio-desktop/">R Studio</a>,
+            <a href="https://public.tableau.com/app/discover">Tableau Public</a>,
+            and <a href="https://desktop.github.com/">GitHub Desktop</a>
+        </li>
+        <li>You have access to Microsoft Excel, whether <a
+                href="https://www.microsoft.com/en-us/microsoft-365/p/excel/CFQ7TTC0HR4R?ef_id=_k_6c21ac55d67a147acce5c81734cef983_k_6c21ac55d67a147acce5c81734cef983_k_EAIaIQobChMIy5DLk9nR8QIVgUCGCh3qZwFYEAAYASAAEgJtrPD_BwE:G:s&OCID=AID2100131_SEM_CFQ7TTC0HR4R&MarinID=CFQ7TTC0HR4R&lnkd=Google_Microsoft_O365SMB_TopPerformers_FeaturedProduct&msclkid=6c21ac55d67a147acce5c81734cef983&utm_source=bing&utm_medium=cpc&utm_campaign=SEA_O365SMB_TopPerformers_FeaturedProduct&utm_term=microsoft%20excel%20download&utm_content=Microsoft_Excel">locally</a>
+            or <a href="https://www.office.com/launch/excel?ui=en-US&rs=US&auth=1">online</a>. Excel requires a
+            subscription on your local machine, but offers a free month trial! Online, access to Excel is free.</li>
+        <li>You have created a GitHub Repository for all your precourse work to go into.</li>
+        <li><a href="https://drive.google.com/file/d/1DK3WC3SUGsowAIFkj4qhKFuU2sEhkd-O/view?usp=sharing">Watch this
+                video walkthrough on how to create a GitHub Repository</a></li>
+    </ul>
+    <br>
+    <h2>Excel</h2>
+    
+    <h3>What is Excel?</h3>
+    <p>
+        Microsoft Excel is a powerful spreadsheet software that allows users to create, edit, organize, and analyze
+        data.
+        It uses a grid of cells arranged in rows and columns, where users can enter numbers, text, and formulas to
+        perform calculations, make charts and graphs, and manage data.
+        Excel is a popular tool used in businesses, schools, and personal life for a variety of purposes, such as
+        budgeting, project management, data analysis, and reporting.
+        It offers a wide range of features and functions, including mathematical functions, formatting options,
+        conditional formatting, data validation, pivot tables, and macros.
+        Excel's ease of use, versatility, and flexibility have made it an essential tool for many professionals across
+        industries, and it continues to evolve with new features and
+        capabilities to meet the changing needs of users.
+    </p>
+    <br>
+    <h3>Loading a File</h3>
+    <p>
+        After launching Excel, we are greeted by the <code>Home</code> screen. In this screen, we will see three
+        different panes off to the left
+        hand side. <code>Home</code>, <code>New</code>, and <code>Open</code>. We will click on the <code>Open</code>
+        button to open the <code>Open</code> dialog box.
+        Once we select the open button, we will want to click on <code>Browse</code> option to begin browsing the files
+        on our computer,
+        and select the file we want to open in Excel.
+    </p>
+    <p>
+        With <code>.csv</code> files, Excel will infer the format it imports in. You can verify that the data has been
+        loaded correctly by seeing the column names in the top row followed by data in each other row.
+        Each row should have a value and each column should be a variable.
+    </p>
+
+    <h3>Creating Visualizations</h3>
+    <p>
+        Excel is a powerful tool that can be used to create compelling visualizations of data with minimal effort.
+        Whether you're looking to create charts, graphs,
+        or pivot tables, Excel offers a wide range of options to help you visualize your data in a way that is both
+        informative and visually appealing.
+
+        To get started with creating visualizations in Excel, you will need to select the rows or columns of data that
+        you want to work with.
+        This can be done by simply clicking and dragging the mouse over the cells that contain the data you want to use.
+
+        Once you have selected the data, you can begin creating visualizations using the <code>Insert</code> tab in the
+        Excel ribbon.
+        This tab contains a range of options for creating visualizations, including charts, graphs, and pivot tables.
+    </p>
+
+    <p>
+        <strong>For Example:</strong>
+
+        If I wanted to create a bar chart of my data, I would select the cells containing the data I want to chart, then
+        click on the <code>Insert</code>
+        tab, selecting the <code>Bar Chart</code> option from the <code>Charts</code> section. Excel will automatically
+        generate a bar chart based on the data that I have selected!
+        We can use the <code>Design</code> tab to change the chart type to any available charts from
+    </p>
+    <h3>Exercises</h3>
+    <ul>
+        <li>Complete the following exercises in an <code>.xlsx</code> file.</li>
+        <li>Upload the file to github.com and submit the link to the Git Repository to the Google Classroom Assignment.
+        </li>
+        <h4><strong>Exercise 1:</strong></h4>
+        <p>Using Excel, load in the dataset located <a
+                href="https://www.kaggle.com/datasets/takahirokubo0/annual-financial-data-for-hybrid-cdp-kpi">here</a>.
+        </p>
+        <h4><strong>Exercise 2:</strong></h4>
+        <p>Create a bar chart of the <code>Fiscal Year</code> and <code>Revenue</code> columns.</p>
+    </ul>
+    <br>
+    <h2>MySQL</h2>
+    
+    <ol type="I">
+        <li><a href="https://dev.mysql.com/doc/workbench/en/wb-installing.html">Read the documentation on installation
+                of MySQL Workbench</a></li>
+        <li><a href="https://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-create-connection.html">Read the
+                documentation on how to create a new connection</a></li>
+    </ol>
+    <h3>Walk-Through</h3>
+    <h4>Create a Database</h4>
+    <p>
+        After installation of MySQL, we can open the Workbench, our GUI (Graphic User Interface) for MySQL operations.
+        When opened, we are greeted by the MySQL welcome screen. Don't worry too much about the GUI yet, we will be
+        covering over it in class.
+    </p>
+    <p>
+        On the screen in bold letters is MySQL Connections. Next to this, is a small <code>+</code> button.
+        This is how we will set up our new connection. Once we click on this, we will focus on the
+        <code>Stored Connection</code>
+        and the <code>Test Connection</code> variables. Click on <code>Connection Name</code> and name your connection
+        <code>test</code>. After that, click on the
+        <code>Test Connection</code> button to verify that you have a connection to your database you are trying to
+        create. In the event that the connection fails,
+        you may want to double check your firewall or antivirus. You should also make sure that you installed MySQL
+        using the <b><i>MySQL Installer</i></b>.
+        You may also need to open the port on your computer to accept connections!
+    </p>
+    <p>
+        Once we test the connection and have verified that it works, click the <code>OK</code> button to create your
+        first database.
+        Then we can click on the connection name and open our database.
+    </p>
+    <h4><strong>Create a Table</strong></h4>
+    <p>
+        Structured Query Language (SQL) is a programming language used to manage and manipulate data in relational
+        database systems. SQL is a standard language used across many database management systems,
+        including MySQL, Oracle, Microsoft SQL Server, and PostgreSQL.
+
+        To interact with a MySQL database, you use SQL commands to create, read, update, and delete data. SQL provides a
+        powerful set of commands that allow you to
+        query data, modify tables, and perform various operations on the data stored in a MySQL database.
+        To create a table, we specify using SQL keywords <code>CREATE</code> and <code>TABLE</code>,
+        giving a table name and the names of columns we wish to add to the table.
+    </p>
+    <p><strong>For Example:</strong></p>
+    <pre>
+            CREATE TABLE IF NOT EXISTS products(
+                id INT,
+                product VARCHAR(50),
+                quantity INT,
+            )
+        </pre>
+    <p>
+        In this example, we create the table <code>products</code> only if the table does not already exist. We
+        instantiate the table with three different columns
+        and give each column a name and the data type we expect to see in the column. You can read more about creating a
+        table in SQL <a href="https://www.w3schools.com/mysql/mysql_create_table.asp">here</a>
+    </p>
+    <h4>Inserting Data</h4>
+    <p>Once you have created a table in SQL, the next step is to add data to it. This is typically done using the
+        <code>INSERT</code> keyword,
+        which allows you to specify the values you want to insert into the table. To use the <code>INSERT</code>
+        keyword, you will need to specify
+        the name of the table you want to add data to, followed by the columns that you want to insert data into. You
+        can then provide the values you want to insert into each column,
+        either as a single value or as a set of values separated by commas.
+    </p>
+    <p>
+        <strong>For Example:</strong>
+        Let's say I had a products table with the columns <code>id</code>, <code>product_name</code>, and
+        <code>quantity</code>. To add new products to
+        this table, I would use the following statement.
+    </p>
+
+    <pre>
+            INSERT INTO products
+            VALUES(
+                1,
+                'banana',
+                200
+            )
+        </pre>
+    <p>
+        In this example, we insert into the table <code>products</code> the values for the id column (1), the
+        product_name column (banana), and the quantity column (200).
+        For more on how to utilize the <code>INSERT</code> statement in MySQL, check out <a
+            href="https://www.w3schools.com/mysql/mysql_insert.asp">this</a> resource.
+    </p>
+    <h4>Querying Data</h4>
+    <p>Now that we have a table and data inside that table,
+        what if I wanted to view my data? This is where queries come in! Queries are how we access and return data from
+        a table. A query utilizes the SQL keyword <code>SELECT</code>
+        to select the data that you want to have returned from the table to you or a user.
+    </p>
+    <div><strong>For Example:</strong></div>
+    <pre>
+            SELECT * FROM products
+        </pre>
+    <p>
+        <code>*</code> in SQL has a special meaning. It will return all the data within a table!
+        So, when we run our statement above, we will be returning all data available within our table.
+    </p>
+    <h3>Exercises</h3>
+    <ol type="I">
+        <li>Complete the following exercises in MySQL</li>
+        <li>Save your code for all exercises to a single .sql file and upload the file to your GitHub Repository</li>
+        <h4>Exercise 1:</h4>
+        <p>
+            Create a table named <code>customers</code>. Your table should have three columns in it's creation.
+        <ul>
+            <li>cust_id</li>
+            <li>cust_name</li>
+            <li>address</li>
         </ul>
-      </div>
-    </nav>
-    <main class="container p-3">
-      <div class="row">
-          <div class="col">
-          <h1>Prework for Data Analytics</h1>
-            <p>Get some practice with key technologies used in data analytics.
-            </p>
-            <h2>Exercise 1</h2>
-            <p>Create a Google Sheet to keep track of grades. Use as much creativity as possible. Provide the average of your sample of fake grades. Submit to GitHub when finished.</p>
+        </p>
+        <h4>Exercise 2:</h4>
+        <p>Now that you have created a <code>customers</code> table, insert in three rows of data
+            You are free to choose the data that you insert into your table.
+        </p>
+        <h4>Exercise 3:</h4>
+        <p>Query all the data from your database.</p>
 
-            <h2>Exercise 2</h2>
+        </ul>
+        <br>
+        <h2>R</h2>
+        
+        <ol type="I">
+            <li><a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf">Download the Textbook</a></li>
+            <li>Read Chapter 1</li>
+            <li>Read Chapter 2</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="">Watch the video lesson</a></li>
+                <li><a href="https://forms.gle/NZrRt8bJQSEbk2Zs5">Take the Chapter 1 & 2 Quiz</a></li>
+            </ol>
+        </ol>
+        <h3>Follow Along</h3>
+        <p>
+            After installing R and R Studio, we will launch R Studio. R Studio has a lot in it's GUI, all of
+            which we will be covering over together during our course. Today, we will focus on the <code>new file</code>
+            button, located in the top left corner of R Studio. We will create a new <code>.R, or R Script</code> file.
+            Now that we have our new file, we can begin to work with R!
+        </p>
+        <h3>Variable Assignment</h3>
+        <p>
+            In R, a variable is a name that is assigned to a value or an object. Variable assignment is the process of
+            assigning a value or an object to a variable name.
+            This allows you to store data and use it later in your code. The most basic form of variable assignment in R
+            is to use the assignment operator, which is represented by the <code><-</code> symbol.
+            Notice that the assignment operand (<code><-</code>) points to the object recieving the value of the
+            expression. While the <code>=</code> can be used to assign variables as well,
+            it is frowned upon to use for variable assignments and is improper syntax. Assignments can also be made in
+            the opposite direction, with <code>value -> variable_name</code>. Variables can take on any type of value;
+            from lists, to arrays, to vectors, to characters, to integers, to double precision values!
+        </p>
+        <p>
+            <div>
+                <strong>For Example:</strong>
+            </div>
+        
+            Let's say I wanted to create a variable named <code>x</code> and save the value <code>3</code> to it.
+            The code would look like:
+        </p>
+        <pre>
+            > x <- 3
+            > print(x)
+            3
 
-            <ul>
-              <li><a href="https://dev.mysql.com/downloads/mysql/">MySQL Community Server</a> Download and install</li>
-              <li><a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a> Download and install. This will function as the GUI for MySQL.</li>
-              <li>Create a database using MySQL Workbench using an SQL query.</li>
-              <li>Add a table to the database. Make sure it has at least two different columns! (Price, item, etc.)</li>
-              <li>Insert data into the databse that you created!</li>
-              <li>Run a select query. You can select anything or everything.</li>
-              <li>Save these queries together in SQL file format and upload to GitHub.</li>
-            </ul>
+            # Can also look like:
+            > 3 -> x
+            > x
+            3
+        </pre>
+        <p>
+            This code creates a variable named <code>x</code> and assigns it the value of <code>3</code>! We can then
+            use the variable in our code to reference the value that
+            was assigned to it. We can view that value by calling to the variable or wrapping it in a print statement.
+        </p>
+        <p>
+            We can also assign variables using the <code>assign()</code> function! This is an equivalent to the code
+            mentioned above.
+        </p>
+        <pre>
+            > assign("x", 3)
+            > print(x)
+            3
+        </pre>
+        <h3>Working with Numerical Values</h3>
+        <p>
+            R allows users to perform a variety of operands with integer values. Some examples of these operands would
+            be: <code>+</code>,
+            <code>-</code>, <code>*</code>, <code>/</code>, <code>%%</code>, <code>%/%</code>. Let's take a look at how
+            we can apply these to some numerical values:
+        </p>
+        <pre>
+            # Create two numerical variables
+            num_1 <- 3
+            num_2 <- 5
+            
+            # Perform addition
+            num_1 + num_2
+            
+            # Perform subtraction
+            num_1 - num_2
+            
+            # Perform multiplication
+            num_1 * num_2
+            
+            # Perform division
+            num_1 / num_2
+            
+            # Perform floor division, returning the product of the division without a remainder
+            num_2 %/% num_1
 
-            <h2>Exercise 3</h2>
-            <p>Create accounts on <a href="https://www.kaggle.com/">Kaggle</a> and <a href="https://www.kaggle.com/">Tableau</a>.</p>
-          </div>
-      </div>
-    </main>
+            # Perform modulus, returning the remainder of the division
+            num_2 %% num_1
+        </pre>
+        <h3>Character Manipulation</h3>
+        <p>
+            In programming, strings are a fundamental data type that represent a sequence of characters. Python and R
+            are two popular programming languages used in data
+            analytics and statistical computing, and they both have different terminologies for strings. In Python,
+            strings are referred to as "strings". A string is a sequence of
+            characters enclosed within single quotes, double quotes, or triple quotes. Strings can be manipulated using
+            various built-in string methods such as slicing, concatenation, and formatting.
+            In contrast, R uses the term "Character" to refer to a string-type object. In R, a character is a sequence
+            of characters enclosed within double quotes. Like Python, R also provides
+            several built-in functions to manipulate character strings, such as <code>nchar()</code> to count the number
+            of characters in a string, <code>substr()</code> to extract a substring from a character string, and
+            <code>paste()</code> to concatenate multiple strings.
+        </p>
+        <p>
+            What if I wanted to create two character strings and save them to the variables
+            <code>my_first_name</code> and <code>my_last_name</code>? The code for that would look like:
+        </p>
+        <pre>
+            > my_first_name <- "Alex"
+            > my_last_name <- "Lucchesi"
+        </pre>
+        <p>
+            Now, we have our two variables containing our name. How can I change this into a single variable
+            named <code>my_full_name</code> instead? In R, we can utilize the <code>paste</code> function.
+            <code>paste</code> concatenates values given, spearating them by a <code>sep</code> argument.
+        </p>
+        <p><strong>For Example:</strong></p>
+        <pre>
+            > my_full_name <- paste(my_first_name, my_last_name, sep=' ')
+            > print(my_full_name)
+            Alex Lucchesi
+        </pre>
+        <p>
+            We can also use the print() function to concatenate pieces of our print statement with variables
+            we have created.
+        </p>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <pre>
+            # Print a character string that has "My name is:" and our full name
+            > print("My name is:", my_full_name)
+            My name is: Alex Lucchesi
+        </pre>
+        <h3>Vectors</h3>
+        <p>
+            R operates on named <i>data structures</i>. The simplest data structure in R is the numeric <i>vector</i>,
+            which consists of a single entity of an ordered collection of numbers.
+            In R, we will work a lot with vectors. A vector is like a list in Python, but can only hold a single
+            data type. Vectors are highly functional and an important part of Data Analysis.
+        </p>
+        <p>
+            To create a vector, we use the <code>c()</code> function in R, passing in the values we wish to add to the
+            vector,
+            separated by a comma.
+        </p>
+        <br>
+        <p><strong>For Example:</strong></p>
+        <br>
+        <pre>
+            # Create a numerical vector and save it to the variable my_vec
+            > my_vec <- c(1,2,3,4,5,6,7,8,9)
+            > print(my_vec)
+            1 2 3 4 5 6 7 8 9
+        </pre>
+        <br>
+        <p>
+            Numerical vectors support element-wise operations; meaning we can add,
+            subtract, multiply, and divide vectors across each value in each vector.
+        </p>
+        <p><strong>For Example:</strong></p>
+        <pre>
+            # Create a new numerical vector and save it to the variable my_vec2
+            > my_vec2 <- c(9,8,7,6,5,4,3,2,1)
+            
+            # Create a new variable named my_added_vec which adds both vectors together
+            > my_added_vec <- my_vec + my_vec2
+            
+            # View the new vector
+            > print(my_added_vec)
+            10, 10, 10, 10, 10, 10, 10, 10, 10
 
-    <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
-    <script src="./static/animationbg.js"></script>
-  </body>
+            # Square a vector
+            > my_added_vec ^ 2
+            100, 100, 100, 100, 100, 100, 100, 100, 100
+        </pre>
+        <p>
+            Vectors also support common arithmetic functions, such as log, exp, sin, cos, tan, and sqrt.
+            We can also use aggregate statistical functions such as max, min, length, sum, prod, mean, and median.
+        </p>
+        <p>
+            We can also <b><i>recycle</i></b> vectors. Vector recycling refers to using a shorter vector and a longer
+            vector to complete computations.
+            When we do this, we recycle the shorter vector, causing it to repeat itself from the beginning of the vector
+            until it reaches the end of the second vector!
+        </p>
+        <p><strong>For Example:</strong></p>
+        <pre>
+            > vec_1 <- c(1,2)
+            > vec_2 <- c(1,2,3,4,5,6)
+            > vec_1 * vec_2
+            1, 4, 3, 8, 5, 12
+        </pre>
+        <p>
+            R can also generate sequences of numbers! A sequence is just like the <code>range()</code> function in
+            Python, which generates number between a <i>start</i> and a <i>stop</i> value.
+            We can define a sequence a couple of different ways. One is to use the <code>seq()</code> function to
+            generate a sequence. Generating a sequence using this function allows you to also specify
+            a <b><i>step</i></b>, or <b><i>by</i></b> argument. This argument specifies how much we want to increase the
+            values within the sequence by.
+            The other would be to use the <code>:</code> operand to create the sequence
+        </p>
+        <p>
+            <strong>For Example:</strong>
+        </p>
+        <pre>
+            # Generate a simple sequence using the seq() function
+            > seq(1, 10)
+            1,2,3,4,5,6,7,8,9,10
+
+            # Generate a sequence using the <i>by</i> argument
+            > seq(1,10, by=.2)
+            1, 1.2, 1.4, 1.8, ..., 9.6, 9.8, 10
+            
+            # Generate a sequence using the <i>:</i> operand
+            > 1:10
+            1,2,3,4,5,6,7,8,9,10
+        </pre>
+        <p>
+            Two things to note here are that using the <b><i>by</i></b> argument, we can assign a decimal value and
+            return values that are instead decimal(double precision) values.
+            The other thing to note is that when using a generator, it is <b>inclusive</b> of the stop value. Meaning
+            the final value you give the generator will be returned as well,
+            which differs from Python, where the <code>range()</code> function is non-inclusive of the stop value!
+        </p>
+        <p>
+            A function that is related to the <code>sep()</code> function is the <code>rep()</code> function. This
+            function allows us to repeat or replicate values or objects in various ways.
+        </p>
+        <p>
+            <strong>For Example:</strong>
+        </p>
+        <pre>
+            # Use the rep() function to replicate a single value
+            # Times allows us to specify the number of times we want a value to be replicated
+            > rep(5, times = 5)
+            5, 5, 5, 5, 5
+
+            # Use the rep() function to replicate a vector
+            # Each allows us to specify the number of times we want each value in the vector to be replicated before moving onto the next value in the object.
+            > rep(my_added_vec, times = 5, each = 5)
+            10,10,10,10,10,10,10,10,10,10, ..., 10,10,10,10,10,10,10,10,10,10
+            10,10,10,10,10,10,10,10,10,10, ..., 10,10,10,10,10,10,10,10,10,10
+            10,10,10,10,10,10,10,10,10,10, ..., 10,10,10,10,10,10,10,10,10,10
+            10,10,10,10,10,10,10,10,10,10, ..., 10,10,10,10,10,10,10,10,10,10
+            10,10,10,10,10,10,10,10,10,10, ..., 10,10,10,10,10,10,10,10,10,10
+        </pre>
+        <p>
+            Sometimes, parts of a vector may not be completely known. When a value is "not available", or a "missing
+            value", the vector assigns it the value of <b>NA</b>.
+            Anytime we attempt to perform an operation on a <b>NA</b> value, we will return a <b>NA</b>, since the value
+            is unknown.
+            We can check if a null value exists using the function <code>is.na()</code>. This will return a logical
+            vector where each instance of a null value is listed as TRUE
+            and each non-null value is returned as FALSE.
+        </p>
+        <pre>
+            # Create a vector with a null value
+            > v <- c(1,2,NA,3)
+
+            # Check for null values
+            > is.na(v)
+            FALSE, FALSE, TRUE, FALSE
+        </pre>
+        <p>
+            Sometimes, we may not want to return all the values in a vector. We may only be interested in a couple
+            values from it.
+            We can use indexing to return a subsection of a vector. Indexing a vector is done by calling to the vector
+            and using square brackets immedietely after the
+            expression. Indexing can use the position in the vector that the value we want to call to is located at. For
+            example, in our vector <code>v</code>,
+            if we wanted to access the value of <code>NA</code>, we would call the index position of <strong>3</strong>,
+            as it is the third value inside the vector!
+            We can also give a range of numbers as an indexor, returning all the values within that range!
+        </p>
+        <pre>
+            # Index a vector and grab the NA value
+            # Note that index positions start at the value of 1!
+            > v[3]
+            NA
+
+            # We can also use negative numbers to index a vector.
+            # Using a negative number allows us to access the last value within the vector
+            > v[-1]
+            3
+
+            # Index a vector using a range
+            > v[1:3]
+            1, 2, NA
+
+            # Index a vector using a negative range
+            > v[-(1:3)]
+            2, NA, 3 
+        </pre>
+        <p>
+            We can get even more functionality out of indexing a vector. Vectors can be accessed using a logical
+            statement as well, where the values that match the conditional
+            statement are what is returned to us! To do so, we would place the conditional statement inside the square
+            brackets instead of an index position number.
+        </p>
+
+        <pre>
+            # Return only the values in v that are not NA values
+            > v[!is.na(v)]
+            1, 2, 3
+        </pre>
+        <br>
+        <h2>Exercises</h2>
+        
+        <ul>
+            <li>Complete the following exercises in a <code>.r</code> file.</li>
+            <li>Upload the file to your GitHub Repository</li>
+        </ul>
+        <h4>Exercise 1:</h4>
+        <p>
+            Create three variables; x, y, and z. Assign each of these variables a numerical value,
+            then perform each of the operands you have learned about so far to all three variables.
+        </p>
+        <h4>Exercise 2:</h4>
+        <p>
+            Create two strings with your first and last name. Concatenate the strings and print the new value as
+            "My name is <code>your newly created concatenated variable will go here</code>"
+        </p>
+        <h4>Exercise 3:</h4>
+        <p>
+            Create two numerical vectors of equal length. Multiply these vectors together and save the resulting vector
+            to the variable <code>mult_vect</code>
+        </p>
+
+        <h4>Exercise 4:</h4>
+        <p>
+            Using your vector, <code>mult_vect</code>, index the vector and return the last 4 values.
+        </p>
+
+        <h4>Exercise 5:</h4>
+        <p>
+            Generate a sequence of numerical values. Save this sequence to the variable <code>my_first_sequence</code>
+        </p>
+        <h2>Python 101</h2>
+        
+        <h3>Task 1: Read Textbook</h3>
+        <ol type="I">
+            <li><a href="https://codingtemple.github.io/python/static/PythonCrashCourse.pdf">Download e-book</a></li>
+            <li><a href="https://drive.google.com/file/d/1aB7v9cuOTzm8pE7Vgx4GV5GDkOi29Gpc/view?usp=sharing">Watch the
+                    Video Lesson</a></li>
+            <li>Read Chapter 2</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/19hJa2hjMxwhtByzp6-opGYx4U-aBO9ld/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/j6xBukqDUV3Tat5i6">Chapter 2 Quiz</a></li>
+            </ol>
+            <li>Read Chapter 3</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/1ZDWiHrhFQv-bawspnxWBuHC7ptAKO2oR/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+            </ol>
+            <li>Read Chapter 4</li>
+            <ol type="i">
+                <li>Practice What you Read</li>
+                <li><a href="https://drive.google.com/file/d/1MrxPqbWxarCDFhj_kPbLla5bgcJkgMVg/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/PfrXDr4AxZACBXSXA">Chapters 3 & 4 Quiz</a></li>
+            </ol>
+        </ol>
+            
+        <h3> Task 2: Read Textbook</h3>
+        <ol type="I">
+            <li><a href="https://codingtemple.github.io/python/static/PythonCrashCourse.pdf">Download e-book</a></li>
+            <li>Read Chapter 5</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/1vCW97YNbESs9FUTygGZIz5no_WD6X-fe/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/VetnSUFkSTPRmPFdA">Chapter 5 Quiz</a></li>
+            </ol>
+            <li>Read Chapter 6</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/1Yt7dFwUS-jDnVa7ObCZrxzOO-mAMEWUT/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/tc4NYaeXwAoeuU2Q7">Chapter 6 Quiz</a></li>
+            </ol>
+            <li>Read Chapter 7</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/18j-c2EKA92_6lMb7JZtTvoaaZmB_Gdja/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/ypjq248zjCM7PmG17">Chapter 7 Quiz</a></li>
+            </ol>
+            <li>Read Chapter 8</li>
+            <ol type="i">
+                <li>Practice what you read</li>
+                <li><a href="https://drive.google.com/file/d/1mZ9USzTCYkjOSD0Hu9IGmcXcOVpvWnJ0/view?usp=sharing">Watch
+                        the Video Lesson</a></li>
+                <li><a href="https://forms.gle/pTzpA4stAE8MerXB6">Chapter 8 Quiz</a></li>
+            </ol>
+        </ol>
+        
+        <h2>Task 3: Coding Questions</h2>
+        <ul>
+            <li>Complete the Coding Questions below in one <code>.py</code>file</li>
+            <li>Upload this file to your GitHub Repository and submit the link to your repository to Google Classroom
+            </li>
+            <li><a href="https://drive.google.com/file/d/1DK3WC3SUGsowAIFkj4qhKFuU2sEhkd-O/view?usp=sharing">Watch this
+                    video walkthrough</a></li>
+
+        </ul>
+        <p><strong>You will be turing in this assignment to you google classroom. Please save your 5 functions to one
+                .py file demark the question numbers and the question in a comment above it's respective
+                function</strong></p>
+
+        <h3>Question 1:</h3>
+        <p>Write a function to print "hello_USERNAME!" USERNAME is the input of the function. The first line of the code
+            has been defined as below.</p>
+        <pre>
+            def first_odds():
+            .....
+        </pre>
+
+        <h3>Question 2:</h3>
+        <p>Write a python function, first_odds that prints the odd numbers from 1-100 and returns nothing</p>
+        <pre>
+            def first_odds():
+            .....
+        </pre>
+
+        <h3>Question 3:</h3>
+        <p>
+            Please write a Python function, max_num_in_list to return the max number of a given list. The first line of
+            the code has been defined as below.
+        </p>
+        <pre>
+            def max_num_in_list():
+            .....
+        </pre>
+
+        <h3>Question 4:</h3>
+        <p>Write a function to return if the given year is a leap year. A leap year is divisible by 4, but not divisible
+            by 100, unless it is also divisible by 400. The return should be boolean Type (true/false).</p>
+        <pre>
+            def is_leap_year():
+            .....
+        </pre>
+
+        <h3>Question 5:</h3>
+        <p>Write a function to check to see if all numbers in list are consecutive numbers. For example, [2,3,4,5,6,7]
+            are consecutive numbers, but [1,2,4,5] are not consecutive numbers. The return should be boolean Type.</p>
+        <pre>
+            def is_consecutive(a_list):
+            .....
+        </pre>
+</body>
+
 </html>
